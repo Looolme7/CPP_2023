@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	setlocale(0, "RU");
+
+	int x;
+	bool y;
+	char z;
+	double r;
+	double t, u, k;
+
+	cout << "целое число ";
+	cin >> x;
+	cout << "0 или 1 ";
+	cin >> y;
+	cout << "символ ";
+	cin >> z;
+	cout << "вещественное число ";
+	cin >> r;
+	cout << "сложите два числа " << '\n';
+	cin >> u;
+	cin >> k;
+	t = u + k;
+	cout << t<< '\n';
+	cout << "умножьте два числа " << '\n';
+	cin >> u;
+	cin >> k;
+	t = u * k;
+	cout << t<< '\n';
+	cout << "отнимите одно число из другого " << '\n';
+	cin >> u;
+	cin >> k;
+	t = u - k;
+	cout << t<< '\n';
+	cout << "разделите одно число на другое " << '\n';
+	cin >> u;
+	cin >> k;
+	t = u / k;
+	cout << t;
+	return 0;
+}
