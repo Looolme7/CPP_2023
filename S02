@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0, "Russian");
+    double a, b, c;
+    int k, s, u, j;
+    cout << "Деление с десятичной частью: " << '\n';
+    cout << "Делимое: ";
+    cin >> a;
+    cout << "Делитель: ";
+    cin >> b;
+    c = a / b;
+    cout << "Частное:";
+    cout << c << '\n';
+
+
+    cout << "Деление без остатка:" << '\n';
+    cout << "Делимое: ";
+    cin >> k;
+    cout << "Делитель: ";
+    cin >> s;
+
+    u = k / s;
+
+    cout << "Частное: ";
+    cout << u << '\n';
+
+
+    cout << "Деление с остатком:" << '\n';
+    cout << "Делимое: ";
+    cin >> k;
+    cout << "Делитель: ";
+    cin >> s;
+
+    u = k / s;
+    j = k % s;
+    cout << "Целая часть: ";
+    cout << u << '\n';
+    cout << "Остаток: ";
+    cout << j;
+    return 0;
+}
