@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+double squared_sum(double num1, double num2) {
+    
+    double sum = num1 + num2; 
+    double squared_sum = sum * sum; 
+    return squared_sum;
+}
+
+int main() {
+    setlocale(0, "Russian");
+    double num1, num2;
+    cout << "Введите первое число: ";
+    cin >> num1;
+    cout << "Введите второе число: ";
+    cin >> num2;
+
+    double result = squared_sum(num1, num2);
+    cout << "Квадрат суммы: " << result << endl;
+
+    return 0;
+}
