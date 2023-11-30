@@ -1,0 +1,19 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    setlocale(0, "Russian");
+    ifstream inputFile("output.txt");
+    if (inputFile.is_open()) {
+        int number;
+        int n = 1;
+        while (inputFile >> number) {
+            cout << n << ". " << number << "\n";
+            n++;
+        }
+        inputFile.close();
+    }
+
+    return 0;
+}
