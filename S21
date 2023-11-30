@@ -1,0 +1,25 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    setlocale(0, "Russian");
+    int A, B;
+    cout << "Введите число A: ";
+    cin >> A;
+    cout << "Введите число B (B должно быть больше A): ";
+    cin >> B;
+
+    ofstream outputFile("output.txt");
+    while (A <= B)
+        if (outputFile.is_open()) {
+            for (int i = A; i < B; i++) {
+                int C = i * 3;
+                outputFile << C << "\n";
+            }
+            outputFile.close();
+            cout << "Значения каждого числа, умноженного на 3, были записаны в файл 'output.txt'.";
+        }
+
+    return 0;
+}
