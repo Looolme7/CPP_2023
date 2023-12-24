@@ -1,0 +1,40 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+const double PI = 3.14159265358979323846;
+
+double get_angle(double A, double B, double C) {
+    if (A <= 0 || B <= 0 || C <= 0) {
+        cout << "Ошибка: значение должно быть не менее 0 (N >= 0)\n";
+        return 0;
+    }
+
+
+    double angle_rad = acos((B * B + C * C - A * A) / (2 * B * C));
+    double angle = angle_rad * (180 / PI);
+
+    return angle;
+}
+
+int main() {
+    setlocale(0, "Russian");
+    cout << "Расчёт угла, лежащего напротив первой стороны" << endl;
+    double A;
+    cout << "Значение первой стороны " << endl;
+    cin >> A;
+    double B;
+    cout << "Значение второй стороны " << endl;
+    cin >> B;
+    double C;
+    cout << "Значение третьей стороны " << endl;
+    cin >> C;
+
+    double angle = get_angle(A, B, C);
+
+    if (angle != -1) {
+        cout << "Угол напротив сторны А, равной " << A << ", равен: " << angle << endl;
+    }
+
+    return 0;
+}
