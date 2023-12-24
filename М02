@@ -1,0 +1,36 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+const double PI = 3.1415;
+
+double get_square(double A, int N) {
+    if (N < 3) {
+        cout << "Ошибка: N должно быть не менее 3 (N >= 3)\n";
+        return 0;
+    }
+
+
+    double area = N * A * A / (4 * tan(PI / N));
+
+    return area;
+}
+
+int main() {
+    setlocale(0, "Russian");
+    cout << "Расчёт площади n-угольника" << endl;
+    double side_length;
+    cout << "Значение стороны " << endl;;
+    cin >> side_length;
+    int num_sides;
+    cout << "Число сторон " << endl;
+    cin >> num_sides;
+
+    double square = get_square(side_length, num_sides);
+
+    if (square != 0) {
+        cout << "Площадь " << num_sides << "-угольника со стороной " << side_length << " равна: " << square << endl;
+    }
+
+    return 0;
+}
