@@ -1,0 +1,17 @@
+#include <iostream> 
+#include <vector>
+
+
+using namespace std;
+
+int main()
+{
+    char m[] = "Testing";
+    int length = strlen(m);
+    reverse(m, m + length);
+
+    for (int i = 0; i < length; i++) {
+        cout << m[i] << " ";
+    }
+    return 0;
+}
